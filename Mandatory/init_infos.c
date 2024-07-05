@@ -6,7 +6,7 @@
 /*   By: anacaro5 <anacaro5@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/28 11:58:57 by anacaro5          #+#    #+#             */
-/*   Updated: 2024/07/02 18:39:18 by anacaro5         ###   ########.fr       */
+/*   Updated: 2024/07/05 19:04:22 by anacaro5         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,16 +41,16 @@ void	init_index(t_swap *stack_a, char **av)
 	int		order_posi;
 	t_swap	*current;
 
-	order_posi = 0;
+	order_posi = 1;
 	current = stack_a;
 	find_order(av);
 	while (av[order_posi] && current)
 	{
 		if (ft_atol(av[order_posi]) == current->value)
 		{
-			current->index = order_posi + 1;
+			current->index = order_posi;
 			current = current->next;
-			order_posi = -1;
+			order_posi = 0;
 		}
 		order_posi++;
 	}
