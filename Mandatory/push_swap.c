@@ -6,7 +6,7 @@
 /*   By: anacaro5 <anacaro5@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/01 21:54:22 by anacaro5          #+#    #+#             */
-/*   Updated: 2024/07/02 20:34:19 by anacaro5         ###   ########.fr       */
+/*   Updated: 2024/07/11 17:02:56 by anacaro5         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,20 +68,19 @@ void	sort_many(t_info *stackname)
 	{
 		init_stack_posi(stackname->stack_a);
 		init_stack_posi(stackname->stack_b);
-		init_target_posi(stackname);
+		init_target_posi(stackname); //VERIFICAR DEBUG DAQUIIIIIII
 		init_costs(stackname);
 		cheap_node = find_smallest_move(stackname->stack_b);
 		moving_to_a(stackname, cheap_node);
 		temp = stackname->stack_b;
 	}
 	init_stack_posi(stackname->stack_a);
-	print_list(stackname->stack_a);
+	//print_list(stackname->stack_a);
 	sort_a(&(stackname)->stack_a);
 }
 
-void	push_swap(t_info *info, char **av)
+void	push_swap(t_info *info)
 {
-	init_index(info->stack_a, av);
 	all_to_b(info);
 	sort_three(info);
 	sort_many(info);

@@ -6,7 +6,7 @@
 /*   By: anacaro5 <anacaro5@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/18 14:50:51 by anacaro5          #+#    #+#             */
-/*   Updated: 2024/07/02 20:35:25 by anacaro5         ###   ########.fr       */
+/*   Updated: 2024/07/11 14:41:40 by anacaro5         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -112,7 +112,7 @@ int		sort_two(t_swap *stackname);
 void	sort_three(t_info *stackname);
 void	sort_a(t_swap **stackname);
 void	sort_many(t_info *stackname);
-void	push_swap(t_info *info, char **av);
+void	push_swap(t_info *info);
 
 // check_costs.c
 void	init_costs(t_info *stackname);
